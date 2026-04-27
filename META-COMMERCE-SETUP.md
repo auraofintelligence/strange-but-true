@@ -23,9 +23,13 @@ Why Stripe first:
 Create one payment link per launch product:
 
 - Start Here Sampler: free delivery or mailing-list link.
-- I C. Infinity Starter Pack: `$7 placeholder`.
-- Written Worlds Bundle: `$9 placeholder`.
-- Strange but True Supporter Bundle: `$22 placeholder`.
+- Single I C. Infinity album: `$20`.
+- Two Album Bundle: `$35`.
+- Full Discography Pack: `$70`.
+- Written Worlds Bundle: `$50`.
+- Written Worlds Plus: `$75`.
+- Strange but True Supporter Bundle: `$100`.
+- Supporter Plus / Super Bonus: nominated higher invoice by arrangement.
 
 Replace the `example.com/replace-with-stripe-payment-link...` placeholders in `downloads.html` after links exist.
 
@@ -94,9 +98,13 @@ Suggested setup:
 Launch products:
 
 - Start Here Sampler.
-- I C. Infinity Starter Pack.
+- Single I C. Infinity album.
+- Two Album Bundle.
+- Full Discography Pack.
 - Written Worlds Bundle.
+- Written Worlds Plus.
 - Strange but True Supporter Bundle.
+- Supporter Plus / Super Bonus.
 
 ## Social Sharing
 
