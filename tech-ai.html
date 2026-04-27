@@ -1,82 +1,255 @@
-﻿<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Plain-speaking tech, AI, device, account, website and social setup support on North Stradbroke Island / Minjerribah.">
+    <meta name="description" content="Patient, plain-speaking tech and A.I. support on North Stradbroke Island. Local help making strange technology feel lighter.">
     <title>Tech & AI Help | Strange but True</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand-mark" href="index.html" aria-label="Strange but True home"><span class="brand-strange">Strange</span><span><span class="brand-but">but</span> <span class="brand-true">True</span></span></a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-        <div class="nav-links" id="nav-links">
-          <a href="tech-ai.html" aria-current="page">Tech & AI</a>
-          <a href="events-media.html">Events</a>
-          <a href="grants-ideas.html">Grants</a>
-          <a href="downloads.html">Downloads</a>
-          <a href="market.html">Market</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #bc4ed8; /* Neon Purple */
+            --primary-glow: rgba(188, 78, 216, 0.4);
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, .brand-mark {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Neon Logo */
+        header {
+            padding: 1.5rem 0;
+            background-color: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-mark {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary) !important;
+            text-decoration: none;
+            text-shadow: 0 0 8px var(--primary-glow);
+            transition: 0.3s ease;
+        }
+
+        .brand-mark:hover {
+            color: var(--dark) !important;
+            text-shadow: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .hero-lede {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .check-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .check-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* The "Lighter" Quote Styling */
+        #lighter-tech {
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: none;
+            padding-top: 1.5rem;
+        }
+
+        .note-panel {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 1.5rem;
+        }
+
+        .note-panel h3 {
+            margin-bottom: 1rem;
+        }
+
+        .button.primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 14px 0 var(--primary-glow);
+            transition: 0.3s;
+        }
+
+        .button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(188, 78, 216, 0.6);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .footer-note {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .two-column { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a class="brand-mark" href="index.html">Strange but True</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="tech-ai.html" style="color: var(--primary);">Tech & AI</a>
+                    <a href="downloads.html">Downloads</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
         </div>
-      </nav>
     </header>
+
     <main id="main">
-      <div class="page-tools" aria-label="Page navigation">
-        <button class="back-button" type="button" data-back>Back</button>
-        <a href="index.html">Home</a>
-      </div>
-      <section class="page-hero">
-        <p class="eyebrow">Tech & AI Help</p>
-        <h1>Bring the confusing thing. We'll make sense of it together.</h1>
-        <p class="hero-lede">Patient support for devices, accounts, forms, AI tools, simple websites and everyday digital confidence.</p>
-        <a class="button primary" href="contact.html">Ask for help</a>
-      </section>
-      <section class="section two-column">
-        <div>
-          <h2>Good fits</h2>
-          <ul class="check-list">
-            <li>Phones, tablets, laptops and basic setup</li>
-            <li>Account confusion, passwords and online forms</li>
-            <li>Scam-awareness and safer digital habits</li>
-            <li>Learning AI tools without hype or pressure</li>
-            <li id="web-social">Website, Facebook and simple social setup</li>
-          </ul>
-        </div>
-        <div class="note-panel">
-          <h3>How sessions work</h3>
-          <p>Short, focused sessions by arrangement. The aim is to leave you clearer and more capable, not dependent on a mysterious tech person.</p>
-          <p>For privacy, personal files and passwords are treated carefully. No unnecessary copying or storing of client data.</p>
-        </div>
-      </section>
+        <section class="page-hero">
+            <div class="container">
+                <p style="text-transform: uppercase; letter-spacing: 1px; color: var(--primary); font-weight: 700; margin-bottom: 1rem;">Not hard things, strange things.</p>
+                <h1>Bring the confusing thing. <br>We'll make sense of it together.</h1>
+                <p class="hero-lede">Patient support for devices, accounts, forms, A.I. tools and everyday digital confidence on Minjerribah.</p>
+                <a class="button primary" href="contact.html">Ask for a hand</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="two-column">
+                    <div>
+                        <h2>Good fits</h2>
+                        <ul class="check-list">
+                            <li>Phones, tablets, laptops and basic setup</li>
+                            <li>Account confusion, passwords and online forms</li>
+                            <li>Scam-awareness and safer digital habits</li>
+                            <li>Learning A.I. tools without hype or pressure</li>
+                            <li id="lighter-tech">Local help from someone who likes making strange technology and ideas feel lighter.</li>
+                        </ul>
+                    </div>
+                    <div class="note-panel">
+                        <h3>How sessions work</h3>
+                        <p>Short, focused sessions by arrangement. The aim is to leave you clearer and more capable, not dependent on a mysterious "tech person".</p>
+                        <br>
+                        <p>Operating with sincerity and stewardship. For your privacy, personal files and passwords are treated with the utmost care. No unnecessary copying or storing of client data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="site-footer">
-      <div class="footer-copy">
-        <p>Strange but True. Tech, art and ideas that'll actually help.</p>
-        <p class="footer-note">Based in Amity. Mobile, market-based and by arrangement. <a href="privacy.html">Privacy</a> ? <a href="terms.html">Terms</a> ? <a href="feedback.html">Feedback</a> ? <a href="feedback.html">Feedback</a> ? <a href="feedback.html">Feedback</a></p>
-      </div>
-      <nav class="footer-social" aria-label="Social and related links">
-        <a href="index.html" aria-label="Home"><span class="social-icon icon-home" aria-hidden="true">SBT</span><span>Home</span></a>
-        <a href="https://www.facebook.com/PLACEHOLDER_STRANGE_BUT_TRUE" aria-label="Strange but True on Facebook" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-facebook" aria-hidden="true">f</span><span>Facebook</span></a>
-        <a href="https://x.com/PLACEHOLDER_STRANGE_BUT_TRUE" aria-label="Strange but True on X" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-x" aria-hidden="true">X</span><span>X</span></a>
-        <a href="https://www.instagram.com/PLACEHOLDER_STRANGE_BUT_TRUE" aria-label="Strange but True on Instagram" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-instagram" aria-hidden="true">IG</span><span>Instagram</span></a>
-        <a href="https://www.tiktok.com/@PLACEHOLDER_STRANGE_BUT_TRUE" aria-label="Strange but True on TikTok" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-tiktok" aria-hidden="true">TT</span><span>TikTok</span></a>
-        <a href="https://www.youtube.com/@i.C.Infinity" aria-label="I C. Infinity on YouTube" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-youtube" aria-hidden="true">YT</span><span>YouTube</span></a>
-        <a href="https://open.spotify.com/artist/3HK8H81lXFXOEJaSys7xfQ/discography" aria-label="I C. Infinity on Spotify" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-spotify" aria-hidden="true">SP</span><span>Spotify</span></a>
-        <a href="https://iseeinfinity.com/" aria-label="I See Infinity website" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-infinity" aria-hidden="true">ICI</span><span>I See Infinity</span></a>
-        <a href="https://lukecatalyst.com/" aria-label="Luke Catalyst website" target="_blank" rel="noopener noreferrer"><span class="social-icon icon-catalyst" aria-hidden="true">LC</span><span>Luke Catalyst</span></a>
-      </nav>
+        <div class="container">
+            <p>Strange but True. Tech, art and ideas that actually help.</p>
+            <p class="footer-note">Based in Amity Point. Mobile, market-based and by arrangement on Quandamooka Country.</p>
+        </div>
     </footer>
 
-    <button class="to-top" type="button" data-to-top aria-label="Back to top">Top</button>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
-
