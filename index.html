@@ -17,7 +17,7 @@
     <style>
         :root {
             --primary: #bc4ed8; /* Neon Purple */
-            --primary-glow: rgba(188, 78, 216, 0.4);
+            --primary-glow: rgba(188, 78, 216, 0.5);
             --dark: #0f172a;
             --light: #f8fafc;
             --accent: #f472b6;
@@ -67,20 +67,23 @@
             align-items: center;
         }
 
-        /* Updated Neon Purple Logo */
+        /* Custom Neon Logo Style */
         .logo a {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary) !important;
             text-decoration: none;
             letter-spacing: -0.5px;
-            text-shadow: 0 0 8px var(--primary-glow);
+            text-shadow: 0 0 10px var(--primary-glow);
             transition: 0.3s ease;
         }
 
         .logo a:hover {
-            color: var(--dark) !important;
-            text-shadow: none;
+            color: #ffffff !important;
+            text-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary);
+            background-color: var(--primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
         }
 
         .nav-links {
@@ -102,40 +105,44 @@
 
         /* Hero Section */
         .hero {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, #fdfcfd 0%, #f5f3ff 100%);
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
             text-align: center;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Updated Tagline */
+        /* Updated Mantra Styling */
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--dark), var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--dark);
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             transition: 0.3s;
             cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .btn-primary {
@@ -145,13 +152,13 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(188, 78, 216, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--primary-glow);
         }
 
         /* Section Styles */
         .section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
 
         .bg-light {
@@ -159,46 +166,53 @@
         }
 
         .section-title {
-            font-size: 2.25rem;
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 3.5rem;
             text-align: center;
         }
 
         /* Card Grids */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
             border: 1px solid #e2e8f0;
-            transition: 0.3s;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
             border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(188, 78, 216, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--white);
-            padding: 4rem 0 2rem;
+            padding: 5rem 0 3rem;
             text-align: center;
         }
 
         .footer-content p {
-            opacity: 0.7;
-            font-size: 0.9rem;
+            opacity: 0.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.8rem; }
             .nav-links { display: none; }
         }
     </style>
@@ -236,15 +250,15 @@
 
         <section id="about" class="section">
             <div class="container">
-                <div class="grid">
+                <div class="grid" style="align-items: center;">
                     <div>
                         <h2 style="text-align: left; margin-bottom: 1.5rem;">A Sincere Invitation</h2>
                         <p>Strange but True is an independent organisation focused on joyful responsible abundance. Operating from Amity Point on North Stradbroke Island, I provide technical and creative support that prioritises people over profit.</p>
                         <br>
-                        <p>Whether it's helping an elder navigate digital systems or facilitating a large-scale community cinema event, the goal is simple: to be a grounded, helpful presence in an increasingly complex world.</p>
+                        <p>Whether it is assisting an elder to navigate digital systems or facilitating a large-scale community cinema event, the goal is simple: to be a grounded, helpful presence in an increasingly complex world.</p>
                     </div>
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                        <img src="strange-but-true-market-mockup.webp" alt="Strange but True Market Stall" style="width: 100%; border-radius: 1rem;">
+                    <div>
+                        <img src="strange-but-true-market-mockup.webp" alt="Strange but True Market Stall" style="width: 100%; border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     </div>
                 </div>
             </div>
@@ -256,15 +270,15 @@
                 <div class="grid">
                     <div class="card">
                         <h3>Digital Literacy</h3>
-                        <p>Patient, plain-speaking support for mobile devices, scam prevention, and basic digital troubleshooting.</p>
+                        <p>Patient, plain-speaking support for mobile devices, scam prevention, and basic digital troubleshooting for residents and elders.</p>
                     </div>
                     <div class="card">
-                        <h3>A.I. Strategy</h3>
-                        <p>Pragmatic training on how to use A.I. tools to reduce administrative burden and spark creative projects.</p>
+                        <h3>A.I. & Strategy</h3>
+                        <p>Bespoke training and workflow automation for local organisations like MMEICAC and NSI Housing Society.</p>
                     </div>
                     <div class="card">
-                        <h3>A/V & Events</h3>
-                        <p>Professional projection, audio setups, and outdoor cinema facilitation for community groups and clubs.</p>
+                        <h3>A/V & Event Facilitation</h3>
+                        <p>Professional projection and audio setups for community groups, from club meetings to outdoor cinema premieres.</p>
                     </div>
                 </div>
             </div>
@@ -272,30 +286,30 @@
 
         <section id="archives" class="section">
             <div class="container">
-                <h2 class="section-title">Digital Garden & Creative Archives</h2>
+                <h2 class="section-title">Creative Archives & Digital Garden</h2>
                 <div class="grid">
                     <div class="card">
-                        <h3>Electronic Arts</h3>
-                        <p>Original music albums and visual works produced under the name <strong>i C. infinity</strong>.</p>
+                        <h3>i C. infinity</h3>
+                        <p>Electronic dance music and philosophical soundtracks across three published albums, with more in the works.</p>
                     </div>
                     <div class="card">
-                        <h3>Research Papers</h3>
-                        <p>Non-fiction explorations of systems architecture, local resilience, and A.I. ethics.</p>
+                        <h3>Systems Research</h3>
+                        <p>Advanced explorations into A.I. swarms, local resilience architecture, and the Protopian future.</p>
                     </div>
                     <div class="card">
-                        <h3>The Sandworm Project</h3>
-                        <p>Documentation on sustainable local infrastructure and geopolymer construction methods.</p>
+                        <h3>Written Works</h3>
+                        <p>A growing collection of fiction and non-fiction research, documenting the Sandworm Project and beyond.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section bg-light">
-            <div class="container" style="text-align: center;">
-                <h2 class="section-title">Connect with the Project</h2>
-                <p>Located at Amity Point, North Stradbroke Island (Minjerribah).</p>
-                <br>
-                <a href="mailto:hello@strangebuttrue.com" class="btn btn-primary">Send an Enquiry</a>
+            <div class="container" style="text-align: center; max-width: 700px;">
+                <h2 class="section-title">Connect</h2>
+                <p>Strange but True operates from Amity Point on North Stradbroke Island (Minjerribah). For enquiries regarding digital support, A/V hire, or collaborative projects, please get in touch.</p>
+                <br><br>
+                <a href="mailto:hello@strangebuttrue.com" class="btn btn-primary">Send a Sincere Message</a>
             </div>
         </section>
     </main>
@@ -304,7 +318,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2026 Strange but True. All Rights Reserved.</p>
-                <p>Acknowledging the Quandamooka people as the traditional custodians of the lands and waters where we work.</p>
+                <p>Acknowledging the Quandamooka people as the traditional custodians of the lands and waters where we live and work.</p>
             </div>
         </div>
     </footer>
