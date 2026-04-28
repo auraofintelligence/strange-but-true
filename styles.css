@@ -98,6 +98,21 @@ a {
   text-shadow: 0 0 12px rgba(255, 209, 102, 0.7);
 }
 
+.brand-strange {
+  color: var(--strange-purple);
+  text-shadow: 0 0 12px rgba(143, 77, 255, 0.8);
+}
+
+.brand-but {
+  color: var(--true-cyan);
+  text-shadow: 0 0 12px rgba(95, 216, 255, 0.8);
+}
+
+.brand-true {
+  color: var(--idea-gold);
+  text-shadow: 0 0 12px rgba(255, 209, 102, 0.7);
+}
+
 .nav-links {
   align-items: center;
   display: flex;
