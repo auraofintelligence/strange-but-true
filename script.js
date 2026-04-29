@@ -46,8 +46,18 @@ document.querySelectorAll("[data-checkout-open]").forEach((button) => {
         : "If you are buying a single item, the supporter bundle may be better value once it is live.";
     }
     if (paymentLink) {
-      paymentLink.href = payment.startsWith("http") ? payment : "thank-you.html";
-      paymentLink.textContent = price.toLowerCase() === "free" ? "Get the free sample" : "Pay by card / PayPal";
+      const isPlaceholderPayment = payment.includes("example.com") || payment.includes("replace-with");
+      const isFree = price.toLowerCase() === "free";
+      paymentLink.href = isPlaceholderPayment ? "contact.html" : payment.startsWith("http") ? payment : payment;
+      paymentLink.removeAttribute("target");
+      paymentLink.removeAttribute("rel");
+
+      if (!isPlaceholderPayment && payment.startsWith("http")) {
+        paymentLink.setAttribute("target", "_blank");
+        paymentLink.setAttribute("rel", "noopener noreferrer");
+      }
+
+      paymentLink.textContent = isFree ? "Get the free sample" : isPlaceholderPayment ? "Payment link coming soon" : "Pay by card";
     }
 
     if (checkoutModal instanceof HTMLDialogElement) {
