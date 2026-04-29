@@ -36,7 +36,7 @@ if (homeSupportTitle && homeSupportTitle.textContent.includes("If the help was w
       <p class="eyebrow">Season 0 doorway</p>
       <h2 id="support-note-title">Buy a bundle. Unlock a branch in the public game.</h2>
       <p>The download bundles are the first playable doorway into the Community Ledger. Buy in normal AUD, receive the music or writings through a private download link and temporary password, then choose whether to start a public profile.</p>
-      <p>The $50 music bundle unlocks the iCi/SOL branch after one complete listen-through. The $100 writings bundle, $200 supporter bundle or a Super Bonus unlocks the XRP public-profile path.</p>
+      <p>The iCi/SOL path is the music-story branch: listen through the $50 music bundle, then step into the I Choose Infinity signal layer. The XRP path is the public-ledger branch: buy the writings, supporter bundle or Super Bonus, then start a profile that can later connect purchases, quests, public work and civic evidence.</p>
       <div class="hero-actions">
         <a class="button secondary" href="downloads.html">View bundles</a>
         <a class="button secondary" href="community-ledger.html">Preview the game</a>
@@ -54,15 +54,15 @@ if (checkoutFlow && !document.querySelector("[data-ledger-unlocks]")) {
     <p class="eyebrow">Community Ledger unlocks</p>
     <h3>Fiat purchase first, public path after.</h3>
     <p>Qualifying purchases are made in normal AUD. Along with the downloads, the buyer receives a private download link, a temporary password and an invitation to start a public profile.</p>
-    <p>The $50 Full Discography Pack or equivalent qualifying music bundle unlocks the iCi/SOL music branch after the buyer listens through completely at least once. The $100 Paid Writings Bundle, $200 Supporter Bundle or agreed Super Bonus unlocks the XRP public-profile branch.</p>
+    <p>The iCi/SOL music branch is the story signal: a complete listen-through turns the music bundle into the first I Choose Infinity game step. The XRP public-profile branch is the receipt trail: paid writings, supporter bundles and Super Bonus purchases can later connect a public profile to quests, evidence and community contribution.</p>
   `;
   checkoutFlow.appendChild(unlockBox);
 }
 
 if (checkoutModal) {
-  const cryptoCopy = Array.from(checkoutModal.querySelectorAll(".microcopy")).find((copy) => copy.textContent.includes("Crypto is not part"));
+  const cryptoCopy = Array.from(checkoutModal.querySelectorAll(".microcopy")).find((copy) => copy.textContent.includes("Crypto is not part") || copy.textContent.includes("Community Ledger branches unlock"));
   if (cryptoCopy) {
-    cryptoCopy.innerHTML = 'Community Ledger branches unlock after qualifying AUD purchases. Music unlocks the iCi/SOL path after one complete listen-through; paid writings, supporter bundles and Super Bonus purchases unlock the XRP public-profile path. <a href="community-ledger.html">Read the tutorial</a>.';
+    cryptoCopy.innerHTML = 'Community Ledger branches unlock after qualifying AUD purchases. The iCi/SOL path is the music-story signal after one complete listen-through; the XRP path is the public receipt and profile trail for writings, supporter bundles and Super Bonus purchases. <a href="community-ledger.html">Read the tutorial</a>.';
   }
 }
 
