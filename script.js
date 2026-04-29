@@ -28,6 +28,23 @@ if (navLinks && !navLinks.querySelector('a[href="community-ledger.html"]')) {
   }
 }
 
+const homeSupportTitle = document.querySelector("#support-note-title");
+if (homeSupportTitle && homeSupportTitle.textContent.includes("If the help was worth")) {
+  const supportNote = homeSupportTitle.closest(".support-note");
+  if (supportNote) {
+    supportNote.innerHTML = `
+      <p class="eyebrow">Season 0 doorway</p>
+      <h2 id="support-note-title">Buy a bundle. Unlock a branch in the public game.</h2>
+      <p>The download bundles are the first playable doorway into the Community Ledger. Buy in normal AUD, receive the music or writings through a private download link and temporary password, then choose whether to start a public profile.</p>
+      <p>The $50 music bundle unlocks the iCi/SOL branch after one complete listen-through. The $100 writings bundle, $200 supporter bundle or a Super Bonus unlocks the XRP public-profile path.</p>
+      <div class="hero-actions">
+        <a class="button secondary" href="downloads.html">View bundles</a>
+        <a class="button secondary" href="community-ledger.html">Preview the game</a>
+      </div>
+    `;
+  }
+}
+
 const checkoutFlow = document.querySelector("#checkout-flow .section-heading");
 if (checkoutFlow && !document.querySelector("[data-ledger-unlocks]")) {
   const unlockBox = document.createElement("div");
