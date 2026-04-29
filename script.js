@@ -15,6 +15,19 @@ const guideTitle = document.querySelector("[data-guide-title]");
 const guideResponse = document.querySelector("[data-guide-response]");
 const guideLink = document.querySelector("[data-guide-link]");
 
+if (navLinks && !navLinks.querySelector('a[href="community-ledger.html"]')) {
+  const ledgerLink = document.createElement("a");
+  ledgerLink.href = "community-ledger.html";
+  ledgerLink.textContent = "Ledger";
+
+  const downloadsLink = navLinks.querySelector('a[href="downloads.html"]');
+  if (downloadsLink) {
+    downloadsLink.insertAdjacentElement("afterend", ledgerLink);
+  } else {
+    navLinks.appendChild(ledgerLink);
+  }
+}
+
 if (toggle && navLinks) {
   toggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("is-open");
