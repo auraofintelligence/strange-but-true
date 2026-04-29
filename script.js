@@ -28,6 +28,27 @@ if (navLinks && !navLinks.querySelector('a[href="community-ledger.html"]')) {
   }
 }
 
+const checkoutFlow = document.querySelector("#checkout-flow .section-heading");
+if (checkoutFlow && !document.querySelector("[data-ledger-unlocks]")) {
+  const unlockBox = document.createElement("div");
+  unlockBox.className = "support-note";
+  unlockBox.setAttribute("data-ledger-unlocks", "true");
+  unlockBox.innerHTML = `
+    <p class="eyebrow">Community Ledger unlocks</p>
+    <h3>Fiat purchase first, public path after.</h3>
+    <p>Qualifying purchases are made in normal AUD. Along with the downloads, the buyer receives a private download link, a temporary password and an invitation to start a public profile.</p>
+    <p>The $50 Full Discography Pack or equivalent qualifying music bundle unlocks the iCi/SOL music branch after the buyer listens through completely at least once. The $100 Paid Writings Bundle, $200 Supporter Bundle or agreed Super Bonus unlocks the XRP public-profile branch.</p>
+  `;
+  checkoutFlow.appendChild(unlockBox);
+}
+
+if (checkoutModal) {
+  const cryptoCopy = Array.from(checkoutModal.querySelectorAll(".microcopy")).find((copy) => copy.textContent.includes("Crypto is not part"));
+  if (cryptoCopy) {
+    cryptoCopy.innerHTML = 'Community Ledger branches unlock after qualifying AUD purchases. Music unlocks the iCi/SOL path after one complete listen-through; paid writings, supporter bundles and Super Bonus purchases unlock the XRP public-profile path. <a href="community-ledger.html">Read the tutorial</a>.';
+  }
+}
+
 if (toggle && navLinks) {
   toggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("is-open");
