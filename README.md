@@ -61,24 +61,18 @@ The crypto layer is not the first sale and is not investment advice. It is being
 - Add ABN/business/insurance details when ready.
 - Decide and add a clear repository license.
 
-## License Status
+## The Licence
 
-No license file is currently included.
+This repository operates under **The Strange But True Public Licence**. 
 
-That means the default position is copyright protection: people can view the public repository, but they do not automatically receive permission to reuse the code, writings, music, images, branding or business material beyond what GitHub's own terms allow for viewing and forking.
+We wrote a custom stewardship agreement because standard corporate licences didn't fit the ethos of the Braided Economy. 
 
-Recommended approach for this repository:
+The short version:
+* **Your data is yours:** The `.md` profiles you generate belong entirely to you. 
+* **The code is a gift:** You can clone, adapt, and improve the infrastructure for personal, community, educational, or regenerative purposes, not for resale.
+* **Keep it free:** Do not box up this underlying code or our creative works (music, art, writing, brand) to sell as a product.
+* **Honest Provenance:** Leave the tags on the shirt. Keep the attribution and links back to Strange But True so others can find the doorway.
+* **Reciprocity:** If you improve the public infrastructure, share your fixes back to the commons.
+* **The Ethos:** Use this to foster Joyful Responsible Abundance. Do not use it for extractive or deceptive purposes.
 
-1. Use a **split license** rather than one blanket license.
-2. License the website code under **MIT** if you are comfortable letting others reuse the HTML/CSS/JavaScript structure.
-3. Keep all creative content, music, writing, images, strategy, brand assets, business copy and Community Ledger narrative **All Rights Reserved** unless you intentionally release specific items under another license.
-4. Consider a Creative Commons license only for selected public documents or samples you genuinely want people to share.
-
-Suggested wording to add later:
-
-```text
-Code in this repository is licensed under the MIT License.
-All music, writing, images, brand assets, business materials, Community Ledger concepts and narrative content are copyright Luke Hayes / Strange but True unless otherwise stated. All rights reserved.
-```
-
-This README is not legal advice. The safest practical next step is to add a `LICENSE-CODE.md` for MIT code use, plus a `CONTENT-LICENSE.md` or README section that clearly reserves rights over the creative and business material.
+Read the full stewardship agreement in [LICENCE.md](LICENCE.md).
