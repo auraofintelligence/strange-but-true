@@ -863,6 +863,12 @@ p {
   margin-top: 2rem;
 }
 
+.video-stack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .video-card {
   background: var(--deep-panel);
   border: 1px solid rgba(247, 243, 255, 0.12);
@@ -901,6 +907,7 @@ p {
   border-radius: 6px;
   overflow: hidden;
   position: relative;
+  text-decoration: none;
   width: 100%;
 }
 
@@ -923,6 +930,35 @@ p {
   inset: 0;
   position: absolute;
   width: 100%;
+}
+
+.video-still {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.video-placeholder {
+  align-items: center;
+  border: 1px dashed rgba(144, 240, 224, 0.34);
+  color: var(--muted-light);
+  display: flex;
+  font-weight: 800;
+  inset: 0;
+  justify-content: center;
+  line-height: 1.45;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+}
+
+.video-placeholder-overlay {
+  background: linear-gradient(180deg, rgba(5, 5, 13, 0.08), rgba(5, 5, 13, 0.72));
+  border: 0;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 
 .external-links {
