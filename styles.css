@@ -670,6 +670,22 @@ p {
   margin-top: 0;
 }
 
+.contact-card h3 {
+  color: var(--idea-gold);
+}
+
+.contact-card .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.contact-card h3 + p {
+  margin-top: 0.65rem;
+}
+
+.contact-card .service-details-note {
+  color: var(--muted-light);
+}
+
 .contact-card p + p {
   margin-top: 0.75rem;
 }
