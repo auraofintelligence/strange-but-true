@@ -139,7 +139,15 @@ Note: Instagram and TikTok do not provide simple reliable web share URLs for ord
 
 ## Google Apps Script Forms API
 
-Use one Google Apps Script Web App endpoint for the public forms. Replace `GOOGLE_APPS_SCRIPT_WEB_APP_URL_PLACEHOLDER` in the HTML files after deployment.
+Use one Google Apps Script Web App endpoint for the public forms. Current endpoint:
+
+`https://script.google.com/macros/s/AKfycbyhKWOuIHgi5LVLniO-_ZnMp0ITOufBBPR94PMImQXTt7GRu7Wt_hiHnk_gJJdDg-m_/exec`
+
+Current setup:
+
+- `contact.html` and `feedback.html` post to the Google Apps Script web app endpoint above.
+- `contact-apps-script.gs` is a starter script for a Google Sheet-bound Apps Script web app. It writes form rows to the tabs below and emails notifications to `sbt4183@gmail.com`.
+- Do not use `mailto:` form handling for the public forms. It depends on the visitor's email app and is too brittle for public submissions.
 
 Form types:
 
@@ -172,9 +180,9 @@ Drive/workspace:
 
 - Use `auraofintelligence@gmail.com` Drive / AI Pro workspace for product files, working documents and internal materials where appropriate.
 
-## AI Guide
+## Later AI Guide
 
-The contact page now points to `ai-guide.html`, which is the public planning and configuration source for the future Strange but True guide.
+The AI guide is parked for later. Keep public contact paths focused on the normal enquiry, meeting request and feedback forms for now.
 
 Best v1:
 
