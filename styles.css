@@ -801,6 +801,65 @@ p {
   padding: 5rem 1.25rem 3rem;
 }
 
+.cinematic-hero {
+  --hero-image: none;
+  background-image:
+    linear-gradient(90deg, rgba(5, 5, 13, 0.97) 0%, rgba(5, 5, 13, 0.9) 34%, rgba(5, 5, 13, 0.42) 56%, rgba(5, 5, 13, 0.1) 82%),
+    linear-gradient(180deg, rgba(5, 5, 13, 0.72) 0%, rgba(5, 5, 13, 0.1) 42%, rgba(5, 5, 13, 0.9) 100%),
+    var(--hero-image);
+  background-position: center, center, center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  margin-top: 1rem;
+  max-width: none;
+  min-height: clamp(500px, 58vh, 660px);
+  overflow: hidden;
+  padding:
+    clamp(3.25rem, 5.8vw, 5.25rem)
+    max(1.25rem, calc((100vw - var(--max-width)) / 2 + 1.25rem))
+    clamp(2.75rem, 5vw, 4.5rem);
+  position: relative;
+}
+
+.cinematic-hero::before {
+  background: linear-gradient(90deg, rgba(13, 10, 32, 0.48), rgba(13, 10, 32, 0.14) 46%, transparent 72%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.cinematic-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cinematic-hero h1 {
+  font-size: clamp(2.65rem, 4.85vw, 4.75rem);
+  max-width: 13.6ch;
+  text-shadow: 0 0 28px rgba(5, 5, 13, 0.78);
+}
+
+.cinematic-hero .eyebrow,
+.cinematic-hero .hero-lede,
+.cinematic-hero .button {
+  text-shadow: 0 0 18px rgba(5, 5, 13, 0.9);
+}
+
+.cinematic-hero .hero-lede {
+  line-height: 1.55;
+  max-width: 40rem;
+}
+
+.hero-tech-ai { --hero-image: url("assets/hero-tech-ai.webp"); }
+.hero-events-media { --hero-image: url("assets/hero-events-media.webp"); }
+.hero-grants-ideas { --hero-image: url("assets/hero-grants-ideas.webp"); }
+.hero-downloads { --hero-image: url("assets/hero-downloads.webp"); }
+.hero-community-ledger { --hero-image: url("assets/hero-community-ledger.webp"); }
+.hero-market { --hero-image: url("assets/hero-market.webp"); }
+
 .page-tools {
   align-items: center;
   display: flex;
@@ -1525,6 +1584,22 @@ p {
   .page-hero {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .cinematic-hero {
+    background-image:
+      linear-gradient(90deg, rgba(5, 5, 13, 0.98) 0%, rgba(5, 5, 13, 0.88) 42%, rgba(5, 5, 13, 0.44) 72%, rgba(5, 5, 13, 0.18) 100%),
+      linear-gradient(180deg, rgba(5, 5, 13, 0.72) 0%, rgba(5, 5, 13, 0.14) 48%, rgba(5, 5, 13, 0.92) 100%),
+      var(--hero-image);
+    background-position: center, center, 62% center;
+    min-height: 540px;
+    padding-bottom: 3.25rem;
+    padding-top: 4.5rem;
+  }
+
+  .cinematic-hero h1 {
+    font-size: clamp(2.85rem, 12vw, 4.7rem);
+    max-width: 9.4ch;
   }
 
   .service-grid,

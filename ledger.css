@@ -50,6 +50,28 @@ body.ledger-page {
   scroll-margin-top: 6rem;
 }
 
+.ledger-page .page-hero.cinematic-hero {
+  margin-top: 1rem;
+  max-width: none;
+  min-height: clamp(500px, 58vh, 660px);
+  padding:
+    clamp(3.25rem, 5.8vw, 5.25rem)
+    max(1.25rem, calc((100vw - var(--max-width)) / 2 + 1.25rem))
+    clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.ledger-page .cinematic-hero h1 {
+  font-size: clamp(2.65rem, 4.85vw, 4.75rem);
+  line-height: 1.04;
+  max-width: 13.6ch;
+}
+
+.ledger-page .cinematic-hero .hero-lede {
+  font-size: clamp(1.1rem, 2.1vw, 1.35rem);
+  line-height: 1.55;
+  max-width: 40rem;
+}
+
 .ledger-page .page-tools a,
 .ledger-page .back-button {
   background: rgba(32, 32, 48, 0.7);
@@ -422,6 +444,17 @@ body.ledger-page {
   .ledger-page .page-hero {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .ledger-page .page-hero.cinematic-hero {
+    min-height: 540px;
+    padding-bottom: 3.25rem;
+    padding-top: 4.5rem;
+  }
+
+  .ledger-page .cinematic-hero h1 {
+    font-size: clamp(2.85rem, 12vw, 4.7rem);
+    max-width: 9.4ch;
   }
 
   .choice-grid,
