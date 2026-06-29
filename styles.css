@@ -145,7 +145,7 @@ a {
 }
 
 .hero {
-  align-items: center;
+  align-items: start;
   display: grid;
   gap: 2.5rem;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
@@ -600,6 +600,31 @@ p {
   margin-top: 0.55rem;
 }
 
+.market-landing {
+  align-items: start;
+  grid-template-columns: minmax(0, 0.82fr) minmax(340px, 0.98fr);
+  padding-top: clamp(3.25rem, 6vw, 5rem);
+}
+
+.market-landing h1 {
+  font-size: clamp(2.7rem, 5.3vw, 5rem);
+  max-width: 12ch;
+}
+
+.market-feature-image {
+  align-self: start;
+}
+
+.market-feature-image img {
+  box-shadow: 0 0 42px rgba(95, 216, 255, 0.2), 0 24px 76px rgba(0, 0, 0, 0.58);
+  max-height: min(78vh, 860px);
+  object-position: center top;
+}
+
+.market-details {
+  padding-top: 0;
+}
+
 .about-photo {
   margin: 1.5rem 0 0;
 }
@@ -858,39 +883,6 @@ p {
 .hero-grants-ideas { --hero-image: url("assets/hero-grants-ideas.webp"); }
 .hero-downloads { --hero-image: url("assets/hero-downloads.webp"); }
 .hero-community-ledger { --hero-image: url("assets/hero-community-ledger.webp"); }
-.hero-market { --hero-image: url("assets/hero-market.webp"); }
-
-.page-tools {
-  align-items: center;
-  display: flex;
-  gap: 0.75rem;
-  margin: 0 auto;
-  max-width: var(--max-width);
-  padding: 1rem 1.25rem 0;
-}
-
-.page-tools a,
-.back-button {
-  background: transparent;
-  border: 1px solid rgba(247, 243, 255, 0.18);
-  border-radius: 8px;
-  color: var(--minjerribah-aqua);
-  cursor: pointer;
-  font-family: var(--heading);
-  font-size: 0.92rem;
-  font-weight: 900;
-  padding: 0.45rem 0.65rem;
-  text-decoration: none;
-}
-
-.page-tools a:hover,
-.page-tools a:focus,
-.back-button:hover,
-.back-button:focus {
-  border-color: rgba(144, 240, 224, 0.7);
-  color: var(--soft-white);
-}
-
 .page-hero h1 {
   max-width: 11ch;
 }

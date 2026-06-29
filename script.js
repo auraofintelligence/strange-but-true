@@ -106,17 +106,6 @@ document.querySelectorAll("[data-share]").forEach((button) => {
   });
 });
 
-document.querySelectorAll("[data-back]").forEach((button) => {
-  button.addEventListener("click", () => {
-    if (window.history.length > 1) {
-      window.history.back();
-      return;
-    }
-
-    window.location.href = "index.html";
-  });
-});
-
 document.querySelectorAll("[data-agent-open]").forEach((button) => {
   button.addEventListener("click", () => {
     if (agentModal instanceof HTMLDialogElement) {
