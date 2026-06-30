@@ -1,39 +1,65 @@
-# The Strange But True Public Licence
+# Strange But True Public Source Licence
 
-Copyright © Luke Hayes / Strange But True. All rights reserved except as allowed below.
+Copyright (c) 2026 Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+All rights reserved except as allowed below.
 
-## 1. Your Output: Sovereign Data
+This is a plain-language licence for strange-but-true.
 
-Any generated Markdown (`.md`) profile files created for you to download through this system belong to you, and will not be stored or hosted by this infrastructure.
+This is not an open-source licence. It is a public source licence: people can read, learn from and use the work personally, but commercial and corporate rights stay with Luke Nathan Hayes.
 
-Strange But True claims no ownership over your personal profile output. You may use your profile to seek work, describe your skills, build your enterprise, or participate in public-interest projects, provided your use remains lawful and aligned with Joyful Responsible Abundance.
+## 1. What You Can Do
 
-## 2. The Code: Public Infrastructure
+You may view, share, clone, study, reference and adapt this repo for personal, educational, artistic, research, community or other non-commercial use.
 
-The underlying website code, templates and public profile infrastructure are shared as a gift to the commons.
+You may use a personal AI assistant to help read, explain or adapt the repo for those allowed non-commercial uses.
 
-You may view, clone, study, adapt and improve the code for public-interest, educational, community, artistic or regenerative purposes, under these boundaries:
+If you use or adapt the work, give clear credit:
 
-- **Do Not Sell the Infrastructure:** You may not sell this codebase, templates or public profile infrastructure as a standalone product.
-- **Do Not Repackage for Sale:** You may not repackage the Strange But True system, music, writings, images, brand assets or narrative materials for sale.
-- **Honest Provenance:** You must keep clear attribution to Strange But True and Luke Hayes, including links back to the original project where practical.
-- **Reciprocity:** If you improve the public infrastructure, share useful learning, notes, fixes or improvements back to the public commons where reasonable.
-- **No False Endorsement:** You may not use the Strange But True name, logo or identity to imply endorsement without permission.
+Based on strange-but-true by Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+Original project: https://github.com/auraofintelligence/strange-but-true
+Used under the Strange But True Public Source Licence.
 
-## 3. Creative Works
+## 2. What You Cannot Do Without Permission
 
-Music, writings, images, business materials, brand assets and narrative materials remain copyright Luke Hayes / Strange But True unless stated otherwise.
+You may not use this repo, its code, ideas, text, designs, workflows, data structures, assets, names or close derivatives for commercial, corporate, institutional, government, startup, agency, client or employer purposes without written permission from Luke Nathan Hayes.
 
-You may not sell, repackage, upload, redistribute, train AI systems on, or present these works as your own.
+That means you may not:
 
-## 4. The Ethos: Joyful Responsible Abundance
+- sell, monetise, repackage, licence, sponsor, advertise with or commercially distribute the work;
+- use it in paid products, SaaS tools, client work, consulting, courses, workshops, dashboards, templates or commercial infrastructure;
+- use it inside a company, agency, startup, institution, government body or funded commercial project;
+- use it for commercial AI training, datasets, embeddings, knowledge bases, agents, model products or evaluation systems;
+- remove attribution or present the work as your own;
+- use Strange But True, Aura of Intelligence, Luke Nathan Hayes, project names, screenshots, music, writing, images or brand material to imply endorsement, partnership or approval.
 
-This infrastructure is a doorway for tech, art and ideas that'll help foster self-sovereignty, genuine community connection, ecological stewardship and joyful responsible abundance.
+## 3. Commercial Rights
 
-You must not use this system for extractive, aggressive, deceptive, exploitative or harmful purposes.
+All commercial rights are reserved to Luke Nathan Hayes.
 
-## 5. The Reality
+Commercial use requires written permission from Luke Nathan Hayes. Permission can be granted, denied, limited, priced or handled under a separate agreement.
 
-This tool is offered sincerely “as is,” and Strange But True makes no warranties and accepts no liability for how you choose to implement, adapt or rely on this material.
+## 4. Your Own Outputs
 
-Build wisely, keep the code clean, and look after your neighbours.
+If this repo lets you create your own notes, Markdown files, exports, maps, profiles, plans or other personal outputs, those outputs belong to you.
+
+You are responsible for what you put into the tool, what you export, and where you share it.
+
+## 5. Third-Party Material
+
+This licence only covers original material created by Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+
+Third-party libraries, fonts, APIs, platforms, services or embedded material keep their own licences.
+
+## 6. No Harmful Or Misleading Use
+
+You may not use this repo or its material for deceptive, exploitative, aggressive, hateful, harassing, unsafe or harmful purposes.
+
+You may not use it to mislead people about privacy, security, law, finance, health, public safety, governance, crypto, AI capability or current events.
+
+## 7. No Warranty
+
+This repo is provided as-is.
+
+Luke Nathan Hayes / Strange But True / Aura of Intelligence make no warranties and accept no liability for how you use, adapt, interpret, deploy or rely on this material.
+
+Public prototypes are not finished legal, medical, financial, privacy, security, public-safety, governance, crypto, AI-governance or production infrastructure unless Luke Nathan Hayes explicitly says so in writing.
