@@ -140,7 +140,7 @@ const guideResponses = {
   downloads: {
     title: "Browse samples and bundles.",
     response:
-      "Start with the free sampler, music catalogue or writing bundles. Paid download links are placeholders until the checkout provider is connected.",
+      "Explore the music and writing catalogue, then contact Luke to confirm availability, payment and delivery.",
     href: "downloads.html",
     label: "Open downloads",
   },
@@ -286,3 +286,39 @@ document.querySelectorAll("[data-sample-toggle]").forEach((button) => {
     button.textContent = animated ? "Animated glow" : "Calm view";
   });
 });
+
+// Keep the full directory visible until a visitor chooses to search.
+const projectSearch = document.querySelector("#project-search-input");
+const projectSearchStatus = document.querySelector("#project-search-status");
+const projectSearchContainer = document.querySelector(".project-search");
+const projectRegions = Array.from(document.querySelectorAll(".project-region"));
+
+if (projectSearch instanceof HTMLInputElement && projectSearchStatus && projectSearchContainer) {
+  projectSearchContainer.hidden = false;
+  projectSearch.addEventListener("input", () => {
+    const query = projectSearch.value.trim().toLocaleLowerCase();
+    let shown = 0;
+    projectRegions.forEach((region) => {
+      const cards = Array.from(region.querySelectorAll(".project-card-grid > .layer-card"));
+      let regionShown = 0;
+      cards.forEach((card) => {
+        const matches = !query || card.textContent.toLocaleLowerCase().includes(query);
+        card.hidden = !matches;
+        if (matches) { regionShown += 1; shown += 1; }
+      });
+      region.hidden = Boolean(query) && regionShown === 0;
+      region.querySelectorAll(".project-subheading").forEach((heading) => {
+        let next = heading.nextElementSibling;
+        let groupHasMatch = false;
+        while (next && !next.classList.contains("project-subheading")) {
+          if (next.classList.contains("layer-card") && !next.hidden) groupHasMatch = true;
+          next = next.nextElementSibling;
+        }
+        heading.hidden = Boolean(query) && !groupHasMatch;
+      });
+    });
+    projectSearchStatus.textContent = query
+      ? `${shown} ${shown === 1 ? "project" : "projects"} found.`
+      : "";
+  });
+}

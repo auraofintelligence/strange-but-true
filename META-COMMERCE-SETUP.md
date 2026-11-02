@@ -29,7 +29,6 @@ Create one payment link per launch product:
 - Written Worlds Bundle: `$50`.
 - Written Worlds Plus: `$75`.
 - Strange but True Supporter Bundle: `$100`.
-- Supporter Plus / Super Bonus: nominated higher invoice by arrangement.
 
 Replace the `example.com/replace-with-stripe-payment-link...` placeholders in `downloads.html` after links exist.
 
@@ -104,30 +103,18 @@ Launch products:
 - Written Worlds Bundle.
 - Written Worlds Plus.
 - Strange but True Supporter Bundle.
-- Supporter Plus / Super Bonus.
 
 ## Social Sharing
 
 The site currently includes:
 
 - Web Share API button for phones.
-- Facebook share link.
-- X share link.
-- WhatsApp share link.
-- Messenger send link with `FACEBOOK_APP_ID_PLACEHOLDER`.
-- Instagram caption/share-copy button.
-- TikTok caption/share-copy button.
+- Facebook, X and WhatsApp share links.
+- Instagram and TikTok caption/share-copy buttons.
 
 Before launch:
 
-- Replace `https://example.com/replace-with-github-pages-url/` with the live GitHub Pages URL.
-- Replace `FACEBOOK_APP_ID_PLACEHOLDER` if Messenger dialog sharing is kept.
-- Consider using regular Messenger/WhatsApp contact buttons instead of app-based Messenger sharing if that is simpler.
-- Replace footer placeholder social profile URLs:
-  - `https://www.facebook.com/PLACEHOLDER_STRANGE_BUT_TRUE`
-  - `https://x.com/PLACEHOLDER_STRANGE_BUT_TRUE`
-  - `https://www.instagram.com/PLACEHOLDER_STRANGE_BUT_TRUE`
-  - `https://www.tiktok.com/@PLACEHOLDER_STRANGE_BUT_TRUE`
+- Add further social profiles only when their correct addresses are known.
 
 Note: Instagram and TikTok do not provide simple reliable web share URLs for ordinary website links in the same way Facebook, X and WhatsApp do. The current buttons use the phone-native share sheet or copyable caption text, which is usually the cleaner path.
 

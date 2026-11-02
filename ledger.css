@@ -212,6 +212,91 @@ body.ledger-page {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.project-subheading {
+  grid-column: 1 / -1;
+  color: var(--soft-white);
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  margin: 1rem 0 0;
+}
+
+.project-search {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  max-width: 32rem;
+}
+
+.project-search[hidden],
+.project-region[hidden],
+.project-card-grid > [hidden] {
+  display: none;
+}
+
+.project-search label {
+  color: var(--soft-white);
+  font-weight: 700;
+}
+
+.project-search input {
+  background: var(--deep-panel);
+  border: 1px solid rgba(247, 243, 255, 0.3);
+  border-radius: 0.5rem;
+  color: var(--soft-white);
+  font: inherit;
+  min-height: 3rem;
+  padding: 0.65rem 0.8rem;
+  width: 100%;
+}
+
+.project-search input::placeholder {
+  color: var(--muted-light);
+}
+
+.project-search input:focus-visible {
+  outline: 2px solid var(--true-cyan);
+  outline-offset: 3px;
+}
+
+.project-search p {
+  color: var(--muted-light);
+  margin: 0;
+}
+
+.project-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 2rem;
+}
+
+.project-jump a {
+  border: 1px solid var(--ledger-line);
+  border-radius: 999px;
+  color: var(--soft-white);
+  padding: 0.65rem 1.1rem;
+  text-decoration: none;
+}
+
+.project-jump a:hover,
+.project-jump a:focus-visible {
+  border-color: #5fd8ff;
+}
+
+.project-region {
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+}
+
+.project-region-heading h3 {
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  scroll-margin-top: 6rem;
+}
+
+.project-region-heading p {
+  color: var(--muted-light);
+  margin-top: 0.65rem;
+  max-width: 48rem;
+}
+
 .choice-card,
 .quest-card,
 .braid-card,
@@ -265,6 +350,14 @@ body.ledger-page {
   min-height: 2.2rem;
   min-width: 2.2rem;
   padding: 0 0.55rem;
+}
+
+.project-card-grid > .layer-card > span {
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 0.3rem 0.55rem;
+  text-align: center;
 }
 
 .choice-card:nth-child(2n) span,

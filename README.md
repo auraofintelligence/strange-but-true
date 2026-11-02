@@ -9,42 +9,39 @@ Live site: https://auraofintelligence.github.io/strange-but-true/
 The site is moving from a simple service brochure into a working public doorway for:
 
 - local tech, AI, device, website and social setup support
+- political and public leadership AI advisory for elected representatives, portfolio holders, councils and mayors
 - event, projector, media and outdoor cinema support
 - grant writing, civic ideas and community project planning
 - paid digital music and writing bundles
 - the **Community Ledger** onboarding game
-- future public profiles, public contribution trails and C-Hour sandbox concepts
+- future public profiles, paid community-contribution trails and separate C-Hour concepts
 
-## Community Ledger Game
+## Community Ledger and C-Hours
 
-The Community Ledger is a slow, public onboarding path for people who want to support Strange but True's wider creative and civic infrastructure.
+The proposed iCi/SOL/XRP pathway concerns paid work connected to community projects. It is an avenue for recording paid community contributions and a local leaderboard recognising them. Its implementation, public records and participation details are still to be developed.
 
-Purchases begin in normal AUD fiat checkout. Along with the downloads, buyers can receive a private download link, a temporary password, and an invitation to build a public profile if they want to join the public game.
+C-Hours sit next to that pathway as a separate, non-financial record of voluntary human contribution. One verified C-Hour recognises one freely given human hour, with no monetary conversion. Paid work and the paid-contribution leaderboard are not part of C-Hours.
 
-Both branches are invitations to build a public profile, join the public infrastructure, and start contributing to the narrative:
-
-- **iCi / SOL branch** - the music-story branch. This is unlocked through the qualifying music bundle after a full listen-through. It connects to the I Choose Infinity story signal and future music-linked quests.
-- **XRP branch** - the public-ledger branch. This is unlocked through paid writings, supporter bundles or Super Bonus purchases. It connects purchases, public profiles, quests, civic evidence and future contribution trails.
-
-The crypto layer is not the first sale and is not investment advice. It is being framed as a later public ledger, profile and reputation layer for a broader reciprocity-economy experiment.
+Online payment gateways were deliberately not connected. For now, music and creative product enquiries, payment and delivery are arranged directly. Public profiles and the proposed Community Ledger are not requirements for receiving a purchase.
 
 ## Main Files
 
 - `index.html` - homepage and main service introduction.
 - `tech-ai.html` - tech, AI, device and website/social support.
+- `political-ai-advisory.html` - political and public leadership AI advisory, scope and rates.
 - `events-media.html` - event, projector, media and outdoor cinema support.
 - `grants-ideas.html` - grant writing and local idea support.
-- `downloads.html` - digital downloads, free samples, music and writing bundles.
-- `community-ledger.html` - public onboarding game and branch explanation.
+- `downloads.html` - music and writing catalogue and direct purchase enquiries.
+- `community-ledger.html` - project directory and proposed paid-contribution and separate C-Hour pathways.
 - `ledger.css` - Community Ledger page styling.
-- `market.html` - market stall presence.
+- `market.html` - planned market stall and noticeboard example.
 - `about.html` - about Luke and the business.
 - `contact.html` - contact, enquiry and meeting request guidance.
 - `feedback.html` - friendly feedback form for Google Sheets logging.
 - `privacy.html` - plain privacy and client-device handling note.
 - `terms.html` - draft digital download and crypto caution terms.
-- `thank-you.html` - post-payment delivery, upsell, referral and contact pathway.
-- `refer.html` - simple referral page and referral-code placeholder.
+- `thank-you.html` - delivery information, sharing and contact pathway.
+- `refer.html` - simple site-sharing page.
 - `ai-guide.html` - responsible AI guide plan, approved knowledge, handoff rules and connector options.
 - `styles.css` - brand styling and responsive layout.
 - `script.js` - menu, checkout modal, voice helper and small page enhancements.
@@ -53,8 +50,8 @@ The crypto layer is not the first sale and is not investment advice. It is being
 
 ## Before Public Launch
 
-- Replace placeholder social links.
-- Connect real Stripe Payment Links or another checkout provider.
+- Add any further verified social profile links when available.
+- Decide later whether to connect an online checkout; it is not required for direct enquiries.
 - Decide how private download links and temporary passwords will be issued.
 - Add real free samples and final paid download contents.
 - Review privacy, terms, refunds and crypto caution wording.
