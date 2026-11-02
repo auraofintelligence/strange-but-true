@@ -15,6 +15,21 @@ const guideTitle = document.querySelector("[data-guide-title]");
 const guideResponse = document.querySelector("[data-guide-response]");
 const guideLink = document.querySelector("[data-guide-link]");
 
+const speakingEnquiry = document.querySelector('form input[name="form_type"][value="enquiry"]')?.form;
+if (speakingEnquiry && new URLSearchParams(window.location.search).get("engagement") === "speaking") {
+  const topic = speakingEnquiry.querySelector('select[name="topic"]');
+  const message = speakingEnquiry.querySelector('textarea[name="message"]');
+  if (topic) topic.value = "Public speaking engagement";
+  if (message && !message.value.trim()) {
+    message.value = [
+      "I'd like to discuss a speaking engagement with Luke Nathan Hayes.",
+      "", "Organisation and event:", "Proposed date:", "Location or online:",
+      "Audience and approximate size:", "Themes and intended outcomes:",
+      "Preferred format and duration:", "Budget:", "Recording or publication plans:",
+    ].join("\n");
+  }
+}
+
 if (navLinks && !navLinks.querySelector('a[href="community-ledger.html"]')) {
   const ledgerLink = document.createElement("a");
   ledgerLink.href = "community-ledger.html";

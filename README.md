@@ -22,16 +22,20 @@ The proposed iCi/SOL/XRP pathway concerns paid work connected to community proje
 
 C-Hours sit next to that pathway as a separate, non-financial record of voluntary human contribution. One verified C-Hour recognises one freely given human hour, with no monetary conversion. Paid work and the paid-contribution leaderboard are not part of C-Hours.
 
-Online payment gateways were deliberately not connected. For now, music and creative product enquiries, payment and delivery are arranged directly. Public profiles and the proposed Community Ledger are not requirements for receiving a purchase.
+The digital music checkout is being completed for Stripe and PayPal, with live package totals of $20/$35/$45/$55 for any one/two/three/four completed albums. The dedicated order endpoint and payment accounts must be configured and tested before payments open. Digital delivery remains manual after provider verification. Public profiles and the proposed Community Ledger are not requirements for receiving a purchase.
 
 ## Main Files
 
 - `index.html` - homepage and main service introduction.
 - `tech-ai.html` - tech, AI, device and website/social support.
 - `political-ai-advisory.html` - political and public leadership AI advisory, scope and rates.
+- `public-speaking.html` / `speaking.css` - A Fair Go in the Age of Superintelligence speaking topics, audiences, formats and booking enquiries. Speaking fees remain quoted to the brief pending a rate decision.
 - `events-media.html` - event, projector, media and outdoor cinema support.
 - `grants-ideas.html` - grant writing and local idea support.
-- `downloads.html` - music and writing catalogue and direct purchase enquiries.
+- `downloads.html` - four completed albums, fifth album in progress, live bundle prices and digital checkout.
+- `downloads.css` / `downloads.js` - music catalogue styling, live selection totals and order controls.
+- `checkout-config.js` - public checkout endpoint only; never add credentials here.
+- `tools/checkout/README.md` - private order-sheet and Stripe/PayPal server deployment instructions.
 - `community-ledger.html` - project directory and proposed paid-contribution and separate C-Hour pathways.
 - `ledger.css` - Community Ledger page styling.
 - `market.html` - planned market stall and noticeboard example.
@@ -51,7 +55,7 @@ Online payment gateways were deliberately not connected. For now, music and crea
 ## Before Public Launch
 
 - Add any further verified social profile links when available.
-- Decide later whether to connect an online checkout; it is not required for direct enquiries.
+- Complete and test the Stripe/PayPal order endpoint; see `tools/checkout/README.md`.
 - Decide how private download links and temporary passwords will be issued.
 - Add real free samples and final paid download contents.
 - Review privacy, terms, refunds and crypto caution wording.

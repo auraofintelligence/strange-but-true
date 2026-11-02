@@ -2,51 +2,31 @@
 
 This is a practical proposal for connecting the Strange but True site to Meta Business Suite, Meta Pixel, social sharing and a small direct checkout store.
 
-## Recommended Checkout Stack
+## Digital Music Checkout
 
-Start simple:
+The Downloads page offers Stripe and PayPal for digital album orders. Its public configuration remains disabled until the dedicated Apps Script deployment and both payment accounts are configured and tested.
 
-1. **Stripe Payment Links** for direct card, Apple Pay and Google Pay style checkout.
-2. **PayPal** as a secondary payment option if customers ask for it.
-3. **Manual crypto verification** only after the real XRP, SOL and iCi-on-SOL wallet addresses are confirmed.
+- Any one completed album: `$20 AUD`.
+- Any two completed albums: `$35 AUD`.
+- Any three completed albums: `$45 AUD`.
+- All four completed albums: `$55 AUD`.
 
-Why Stripe first:
+A Protopian Gambit is included in the same deals as Songs of Straddie, Chronicles of the Forgotten and Starseed Code. Straddie Fun remains in progress.
 
-- Mobile checkout is clean.
-- No full ecommerce platform is needed at launch.
-- Each product can have its own payment link.
-- Stripe can redirect back to `thank-you.html` after payment.
-- Meta Pixel events can later track product button clicks and thank-you page visits.
+`downloads.js` updates the displayed total as albums are checked. The server independently validates the four album IDs and calculates the amount. Buyer-supplied prices are not used.
 
-## Product Links To Create
-
-Create one payment link per launch product:
-
-- Start Here Sampler: free delivery or mailing-list link.
-- Single I C. Infinity album: `$20`.
-- Two Album Bundle: `$35`.
-- Full Discography Pack: `$70`.
-- Written Worlds Bundle: `$50`.
-- Written Worlds Plus: `$75`.
-- Strange but True Supporter Bundle: `$100`.
-
-Replace the `example.com/replace-with-stripe-payment-link...` placeholders in `downloads.html` after links exist.
+Setup and tests: see `tools/checkout/README.md`. The code continues the Music Universe Apps Script checkout approach, with actual Stripe Checkout Sessions and PayPal Orders integration. Payment credentials belong only in private Script Properties. `checkout-config.js` contains only the public web-app endpoint.
 
 ## Delivery Setup
 
-Early options:
+- Order details are recorded in a private Google Sheet.
+- A provider response is verified before an order is marked paid.
+- Luke receives a notification for verified paid orders and delivers the agreed files manually.
+- Returning to a confirmation URL by itself does not prove payment.
+- USB, CD and DVD orders remain separately arranged until their media and delivery charges are set.
+- Writing and data packages are not part of this fixed-price music checkout.
 
-- Stripe success page redirects to `thank-you.html`.
-- The thank-you page explains that delivery is by email while the catalogue is being set up.
-- Later, replace that with secure download links or an automated delivery service.
-
-Minimum before launch:
-
-- Product file names and formats.
-- Refund policy.
-- Delivery timing.
-- Support contact.
-- Test purchase.
+Before accepting public payments, complete a sandbox test for each provider and confirm the delivery process. The frontend remains disabled when its endpoint is missing.
 
 ## Meta Business Suite
 
@@ -94,15 +74,7 @@ Suggested setup:
 - Use product links pointing back to the direct website checkout or Stripe Payment Links.
 - Keep product names identical across website, Meta and posts.
 
-Launch products:
-
-- Start Here Sampler.
-- Single I C. Infinity album.
-- Two Album Bundle.
-- Full Discography Pack.
-- Written Worlds Bundle.
-- Written Worlds Plus.
-- Strange but True Supporter Bundle.
+Launch products should match the current digital album deals above. Do not publish retired writing/supporter tiers or unfinished data packages as checkout products.
 
 ## Social Sharing
 
