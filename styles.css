@@ -1004,7 +1004,9 @@ p {
   width: 100%;
 }
 
-#strange-but-true-song {
+#strange-but-true-song,
+#music-videos-title,
+#contact-form-title {
   scroll-margin-top: 6rem;
 }
 

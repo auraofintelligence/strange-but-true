@@ -30,6 +30,13 @@ if (speakingEnquiry && new URLSearchParams(window.location.search).get("engageme
   }
 }
 
+document.querySelectorAll("[data-enquiry-topic]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const topic = speakingEnquiry?.querySelector('select[name="topic"]');
+    if (topic) topic.value = link.dataset.enquiryTopic;
+  });
+});
+
 if (navLinks && !navLinks.querySelector('a[href="community-ledger.html"]')) {
   const ledgerLink = document.createElement("a");
   ledgerLink.href = "community-ledger.html";
