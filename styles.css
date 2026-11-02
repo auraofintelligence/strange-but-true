@@ -602,13 +602,15 @@ p {
 }
 
 .mockup-frame {
+  justify-self: center;
   margin: 0;
+  width: 100%;
 }
 
 .mockup-frame img {
   border-radius: 8px;
-  max-height: 720px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   width: 100%;
 }
 
@@ -631,12 +633,11 @@ p {
 
 .market-feature-image {
   align-self: start;
+  max-width: 484px;
 }
 
 .market-feature-image img {
   box-shadow: 0 0 42px rgba(95, 216, 255, 0.2), 0 24px 76px rgba(0, 0, 0, 0.58);
-  max-height: min(78vh, 860px);
-  object-position: center top;
 }
 
 .market-details {
@@ -999,6 +1000,22 @@ p {
   border: 0;
   height: 100%;
   inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#strange-but-true-song {
+  scroll-margin-top: 6rem;
+}
+
+.song-video-grid {
+  align-items: start;
+}
+
+.video-embed video {
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
   position: absolute;
   width: 100%;
 }
@@ -1501,6 +1518,12 @@ p {
 }
 
 @media (max-width: 880px) {
+  #market {
+    gap: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .nav {
     align-items: start;
   }
